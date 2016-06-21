@@ -1,5 +1,5 @@
 <?php 
-reqire('app/bootstrap.php');
+require('app/bootstrap.php');
 
 
 
