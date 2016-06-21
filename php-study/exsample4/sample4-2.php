@@ -11,7 +11,6 @@ SQL;
 
 $aryparam = array(
   ":user_name"=>"kix0000%",
-  ":birthday"=>$birthday,
 );
 
 $objDatabase = clsCommonDatabase::getInstance();
