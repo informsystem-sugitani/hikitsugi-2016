@@ -36,7 +36,8 @@ class ClassLoader
     private static function directories()
     {
         if (empty(self::$dirs)) {
-            $base = $_SERVER['DOCUMENT_ROOT'].'/hikitsugi-2016/php-study/exsample4/app';
+            $base = dianame(__FILE__).'/hikitsugi-2016/php-study/exsample4/app';
+echo "B=".$base;
             self::$dirs = array(
                 // 【重要】ここに読み込んでほしいディレクトリを足していきます sugitani
                 $base . '/classes',
