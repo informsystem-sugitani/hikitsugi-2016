@@ -1,4 +1,4 @@
-<?php 
+<?php
 require('app/bootstrap.php');
 
 
@@ -6,16 +6,17 @@ require('app/bootstrap.php');
 $sql=<<<SQL
   select    *
   from      valid_users
-  where     user_name = :user_name
+  where     user_name like :user_name
 SQL;
 
 $aryparam = array(
-  ":user_name"=>"kix00001",
+  ":user_name"=>"kix0000%",
+  ":birthday"=>$birthday,
 );
 
 $objDatabase = clsCommonDatabase::getInstance();
 $rec = $objDatabase->pullDbData($sql,$aryparam);
 
-var_dump($rec[0]);
+var_dump($rec);
 
  ?>
